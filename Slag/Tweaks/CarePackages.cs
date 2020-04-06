@@ -11,14 +11,10 @@ namespace Slag.Tweaks
         {
             public static void Postfix(ref CarePackageInfo[] ___carePackages)
             {
-                ___carePackages = null;
-                var extraPackages = new List<CarePackageInfo>()//___carePackages)
+                var extraPackages = new List<CarePackageInfo>(___carePackages)
                 {
-                    //new CarePackageInfo(ElementLoader.FindElementByName("Slag").tag.ToString(), 2500f, () => CycleCondition(18))
-                    new CarePackageInfo(SlagWoolConfig.ID, 2f, null)
+                    new CarePackageInfo(ElementLoader.FindElementByName("Slag").tag.ToString(), 2500f, null)
                 };
-
-
 
                 ___carePackages = extraPackages.ToArray();
             }

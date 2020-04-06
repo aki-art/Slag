@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Klei.AI;
-using STRINGS;
-using TUNING;
 using UnityEngine;
 
 namespace Slag
@@ -46,6 +43,7 @@ namespace Slag
 
 		public void OnSpawn(GameObject inst)
 		{
+			//inst.GetComponent<KPrefabID>().AddTag(ModAssets.slagWoolTag, false);
 		}
 
 	}

@@ -8,7 +8,7 @@ namespace Slag
     {
         public static readonly SimHashes slagSimHash = (SimHashes)Hash.SDBMLower("Slag");
         public static readonly SimHashes slagGlassSimHash = (SimHashes)Hash.SDBMLower("SlagGlass");
-        public static readonly Tag slagWoolTag = TagManager.Create("MineralWool", "Mineral Wool");
+        public static readonly Tag slagWoolTag = TagManager.Create("MineralWool");
         public static Texture2D LoadTexture(string name, string directory = null)
         {
             Texture2D texture = null;

@@ -16,7 +16,7 @@ namespace Slag.Critter
             {
                 var codes = orig.ToList();
                 var methodInfo = AccessTools.Method(typeof(Stomach_Poop_Transpiler), "PoopSlag");
-                var field = AccessTools.Field(typeof(CreatureCalorieMonitor.Stomach), "owner");
+                var field = AccessTools.Field(typeof(Stomach), "owner");
                 codes.InsertRange(codes.Count - 2, new[]{
                                                     new CodeInstruction(OpCodes.Ldarg_0),
                                                     new CodeInstruction(OpCodes.Ldfld, field),
@@ -29,6 +29,8 @@ namespace Slag.Critter
 
             public static void PoopSlag(GameObject owner, float amount)
             {
+                if (owner.name != HatchMetalConfig.ID) return;
+
                 float slag_poop_mass = amount / 3f;
 
                 int target_cell = Grid.PosToCell(owner.transform.GetPosition());

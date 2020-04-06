@@ -72,6 +72,9 @@
   <ItemGroup>
     <Compile Include="Buildings\BuildingPatches.cs" />
     <Compile Include="Buildings\DenseInsulationTilesConfig.cs" />
+    <Compile Include="Buildings\InsulatedManualAirlockConfig.cs" />
+    <Compile Include="Buildings\InsulatedMechanizedAirlockConfig.cs" />
+    <Compile Include="Critter\RockWoolDreckoConfig.cs" />
     <Compile Include="Critter\SmoothHatchPatch.cs" />
     <Compile Include="Elements\Substances.cs" />
     <Compile Include="Log.cs" />
@@ -81,7 +84,8 @@
     <Compile Include="Tweaks\CarePackages.cs" />
     <Compile Include="Tweaks\MetalRefinery.cs" />
     <Compile Include="SlagStrings.cs" />
-    <Compile Include="Tweaks\SlagWoolConfig.cs" />
+    <Compile Include="Patches.cs" />
+    <Compile Include="SlagWoolConfig.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
